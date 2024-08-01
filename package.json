@@ -10,6 +10,7 @@
     "axios": "^1.6.6",
     "concurrently": "^8.2.2",
     "datatables": "^1.10.18",
+    "dotenv": "^16.4.5",
     "formik": "^2.4.5",
     "react": "^18.2.0",
     "react-data-table-component": "^7.5.4",

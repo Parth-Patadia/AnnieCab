@@ -13,6 +13,7 @@ app.use(express.json());
 const fs = require("fs");
 const http = require("http");
 const colors = require("colors");
+require('dotenv').config();
 
 //Get Home
 app.get("/", (req, res) => {

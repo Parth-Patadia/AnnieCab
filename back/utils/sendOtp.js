@@ -1,12 +1,12 @@
-const accountSid = "AC78cf87e287c71f0640642db3ff0631f5";
-const authToken = "807b585bbad4b796c2aa8937c7d36062";
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 
 exports.sendOtp = async (phone, msg) => {
   return client.messages
     .create({
       to: `+91 ${phone}`,
-      from: "+1 5046134954",
+      from: process.env.TWILIO_PHONE_NUMBER,
       body: `${msg} expiresIn 5 minit`,
     })
     .then((message) => {})
